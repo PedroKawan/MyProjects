@@ -3,13 +3,13 @@ package bankaccount;
 
 import javax.swing.JOptionPane;
 
-public class Account extends Menu{
+abstract public class Account extends Menu{
     
     protected int numberAccount;
     protected String type;
-    private String person;
-    private double money;
-    private boolean opened;
+    protected String person;
+    protected double money;
+    protected boolean opened;
 
     
     public Account(String t, String p,int n){
