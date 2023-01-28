@@ -3,7 +3,7 @@ package bankaccount;
 
 import javax.swing.JOptionPane;
 
-abstract public class Account extends Menu{
+public class Account extends Menu{
     
     protected int numberAccount;
     protected String type;
