@@ -177,26 +177,33 @@ public class Fight implements Battle.interfaces.IntefaceFight{
         
         //Sistema de resposta de acordo com o numero (random).
         //Adiciona o numero de vitoria pra cada round, se der nocalte (2 ou 3) o looping é encerrado.
-        if (random == 0) {
-            System.out.println("- " + this.challanger.getName() + " Win the Round " + roundCurrent + "!");
-            setChallangerRound(1);
-        } else if (random == 1){
-            System.out.println("- " + this.challanged.getName() + " Win the Round " + roundCurrent + "!");
-            setChallangedRound(1);
-        } else if(random == 2){
-            System.out.println("- WOOOW " + this.getChallanger().getName() + " knocks out " + this.getChallanged().getName() + " in the Round " + roundCurrent + "!!!");
-            setChallangerRound(10);
-            this.setStarted(false);
-            
-        } else if (random == 3){
-            System.out.println("- WOOOW " + this.getChallanged().getName() + " knocks out " + this.getChallanger().getName() + " in the Round " + roundCurrent + "!!!");
-            setChallangedRound(10);
-            this.setStarted(false);
-            
-        }
-        
-      
+            switch (random) {
+                
+                case 0:
+                    System.out.println("- " + this.challanger.getName() + " Win the Round " + roundCurrent + "!");
+                    setChallangerRound(1);
+                break;
+                
+                case 1:
+                    System.out.println("- " + this.challanged.getName() + " Win the Round " + roundCurrent + "!");
+                    setChallangedRound(1);
+                break;
+                
+                case 2:
+                    System.out.println("- WOOOW " + this.getChallanger().getName() + " knocks out " + this.getChallanged().getName() + " in the Round " + roundCurrent + "!!!");
+                    setChallangerRound(10);
+                    this.setStarted(false);
+                break;
+                
+                case 3:
+                    System.out.println("- WOOOW " + this.getChallanged().getName() + " knocks out " + this.getChallanger().getName() + " in the Round " + roundCurrent + "!!!");
+                    setChallangedRound(10);
+                    this.setStarted(false);
+                break;
+            }
     }
+      
+    
     
     // • Metodo para analisar vencedor após o looping dos rounds terminar. 
     public void analyze(){
