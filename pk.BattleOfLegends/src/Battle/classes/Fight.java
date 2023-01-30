@@ -33,6 +33,7 @@ public class Fight implements Battle.interfaces.IntefaceFight{
     //Começa a luta.
     @Override
     public void startFight(){
+        if (this.getChallanger().getCategory().equals(this.getChallanged().getCategory())){
         if (this.isConfirmed()) {
             //Se não tiver sido cancelada,a luta começara.
             System.out.println("------ FIGHT ------");
@@ -54,6 +55,10 @@ public class Fight implements Battle.interfaces.IntefaceFight{
         } else {
             System.out.println("The fight was canceled!");
         }
+        } else {
+            System.out.println("The fighters do not have the same category.");
+                }
+        
     }
 
     //Cancela a luta.

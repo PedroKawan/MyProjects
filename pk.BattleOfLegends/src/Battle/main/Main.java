@@ -22,12 +22,12 @@ public class Main {
         f[0].introduceFighter();
         
         f[1] = new Fighter();
-        f[1].register("Joao", "Brasil", 18, 1.70, 68, 0, 0, 0);
+        f[1].register("Steven", "USA", 18, 1.70, 90, 0, 0, 0);
         f[1].introduceFighter();
         
         //Uma luta foi criada.
         l[0] = new Fight();
-        l[0].arrangeFight(f[0], f[1], 6);
+        l[0].arrangeFight(f[0], f[1], 2);
         l[0].startFight();
         
         //status() para verificar mudanças.
