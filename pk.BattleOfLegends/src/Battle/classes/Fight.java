@@ -33,32 +33,35 @@ public class Fight implements Battle.interfaces.IntefaceFight{
     //Começa a luta.
     @Override
     public void startFight(){
+        if (this.getChallanged() != this.getChallanger()) {
         if (this.getChallanger().getCategory().equals(this.getChallanged().getCategory())){
-        if (this.isConfirmed()) {
-            //Se não tiver sido cancelada,a luta começara.
-            System.out.println("------ FIGHT ------");
-            System.out.println(" Fighter 1: " + getChallanger().getName());
-            System.out.println(" Category: " + getChallanger().getCategory());
-            System.out.println("     ");
-            System.out.println(" Fighter 2: " + getChallanged().getName());
-            System.out.println(" Category: " + getChallanged().getCategory());
-            System.out.println("     ");
-            System.out.println(" A.Rounds: " + getRounds());
-            System.out.println("-------------------");
-            
-            //Define a luta como iniciada.
-            this.setStarted(true);
-            
-            //Começa a chamada aos rounds.
-            this.roundStarted();
-        
-        } else {
-            System.out.println("The fight was canceled!");
-        }
+            if (this.isConfirmed()) {
+                //Se não tiver sido cancelada,a luta começara.
+                System.out.println("------ FIGHT ------");
+                System.out.println(" Fighter 1: " + getChallanger().getName());
+                System.out.println(" Category: " + getChallanger().getCategory());
+                System.out.println("     ");
+                System.out.println(" Fighter 2: " + getChallanged().getName());
+                System.out.println(" Category: " + getChallanged().getCategory());
+                System.out.println("     ");
+                System.out.println(" A.Rounds: " + getRounds());
+                System.out.println("-------------------");
+
+                //Define a luta como iniciada.
+                this.setStarted(true);
+
+                //Começa a chamada aos rounds.
+                this.roundStarted();
+
+            } else {
+                System.out.println("The fight was canceled!");
+            }
         } else {
             System.out.println("The fighters do not have the same category.");
                 }
-        
+        } else {
+            System.out.println("The fighters are the same.");
+        }
     }
 
     //Cancela a luta.
