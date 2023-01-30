@@ -24,9 +24,11 @@ public class Fight implements Battle.interfaces.IntefaceFight{
     //Metodos da interface.
     @Override
     public void arrangeFight(Fighter _challanger, Fighter _challanged, int r){
+        
         this.setChallanger(_challanger);
         this.setChallanged(_challanged);
         this.setRounds(r);
+        
     }
     
     
