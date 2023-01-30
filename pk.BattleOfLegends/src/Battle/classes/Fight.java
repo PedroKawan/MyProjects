@@ -2,6 +2,7 @@
 package Battle.classes;
 
 import Battle.classes.Fighter;
+import java.util.Random;
 
 public class Fight implements Battle.interfaces.IntefaceFight{
     
@@ -171,8 +172,8 @@ public class Fight implements Battle.interfaces.IntefaceFight{
     private void roundFight(){
     
         //Sistema random.
-        double r = Math.random();
-        int random = (int) Math.round((0 + r * (3 - 0)));
+        Random r = new Random();
+        int random = r.nextInt(4);
         
         System.out.println("\n- ROUND " + roundCurrent + "!FIGHT!");
         
