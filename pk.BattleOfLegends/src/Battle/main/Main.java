@@ -22,7 +22,7 @@ public class Main {
         f[0].introduceFighter();
         
         f[1] = new Fighter();
-        f[1].register("Steven", "USA", 18, 1.70, 90, 0, 0, 0);
+        f[1].register("Steven", "USA", 18, 1.70, 66, 0, 0, 0);
         f[1].introduceFighter();
         
         //Uma luta foi criada.
